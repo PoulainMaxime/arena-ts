@@ -1,13 +1,9 @@
-interface ICharacter {
-  _hp: number;
-  _atk: number;
-  name: String;
-}
+import { ICharacter } from "./ICharacter";
 
 export class Character implements ICharacter {
   _hp: number;
   _atk: number;
-  name: String;
+  name: string;
 
   getHp(): number {
     return this._hp
@@ -17,7 +13,7 @@ export class Character implements ICharacter {
     return this._atk;
   }
 
-  getName(): String {
+  getName(): string {
     return this.name;
   }
 
@@ -28,15 +24,12 @@ export class Character implements ICharacter {
   setAtk(atk: number) {
     this._atk -= atk;
   }
-  isDead() {
-    if (this.getHp() <= 0) {
-      return true;
-    }
 
-    return false;
+  isDead(): boolean {
+    return this.getHp() <= 0 ? true : false;
   }
 
-  setName(name: String) {
+  setName(name: string) {
     this.name = name;
   }
 
@@ -44,7 +37,7 @@ export class Character implements ICharacter {
     console.log(`Name: ${this.getName()}\nHp: ${this.getHp()}\natk: ${this.getAtk()}`)
   }
 
-  hit(atk) {
+  hit(atk: number) {
     this._hp -= atk;
   }
 

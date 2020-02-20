@@ -1,8 +1,8 @@
-import { Zombie } from "./zombie"
-import { Sprinter } from "./sprinter"
+import { Sprinter } from "./sprinter";
+import { Zombie } from "./zombie";
 
 export class MonsterFactory {
-  createMonster(type: Object);
+  createMonster(type: object);
   createMonster(type: 'zombie'): Zombie;
   createMonster(type: 'sprinter'): Sprinter;
 

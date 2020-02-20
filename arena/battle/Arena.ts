@@ -1,28 +1,28 @@
-
+import { Character } from "../character/Character";
 
 export class Arena {
 
-  fight(first_character, second_caracter) {
+  fight(firstCharacter, secondCaracter): Character {
     let round = 0;
 
     for (let i = 0; i < 1000; i++) {
       ++round;
 
-      if (round % 2 == 0) {
-        first_character.attack(second_caracter);
+      if (round % 2 === 0) {
+        firstCharacter.attack(secondCaracter);
       } else {
-        second_caracter.attack(first_character);
+        secondCaracter.attack(firstCharacter);
       }
 
-      if (first_character.isDead() || second_caracter.isDead()) {
+      if (firstCharacter.isDead() || secondCaracter.isDead()) {
         break;
       }
     }
 
-    if (first_character.isDead()) {
-      return second_caracter;
-    } else if (second_caracter.isDead()) {
-      return first_character;
+    if (firstCharacter.isDead()) {
+      return secondCaracter;
+    } else if (secondCaracter.isDead()) {
+      return firstCharacter;
     }
   }
 

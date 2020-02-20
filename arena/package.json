@@ -4,8 +4,13 @@
   "description": "",
   "scripts": {
     "start": "tsc main.ts && node main.js",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "lint": "tslint -c tslint.json './**/*.ts'"
   },
   "author": "IVIafiia__",
-  "license": ""
+  "license": "",
+  "dependencies": {
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
 }

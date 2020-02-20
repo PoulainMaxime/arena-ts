@@ -17,5 +17,8 @@ $ npm run start
 
 # clean JS files
 $ npm run build
+
+# lint code
+$ npm run lint
 ```
 

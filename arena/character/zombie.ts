@@ -12,7 +12,7 @@ export class Zombie extends Character {
 
   attack(character) {
     if (character instanceof Character) {
-      let atk = Math.floor(Math.random() * 50) + 1;
+      const atk = Math.floor(Math.random() * 50) + 1;
       console.log(`${character.getName()} attack! => ${atk}`)
       character.hit(atk);
     }
